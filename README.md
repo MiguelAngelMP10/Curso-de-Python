@@ -1,2 +1,2 @@
 # Curso-de-Python
-Repositorio para el cursos de python
+Repositorio para el curso de python
