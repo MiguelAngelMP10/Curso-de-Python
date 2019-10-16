@@ -1,6 +1,6 @@
 import turtle
 lado = 50
-numeroLado = 1
+numeroLado = 12
 angulo = 360/numeroLado
 window = turtle.Screen()
 tortuga = turtle.Turtle()
