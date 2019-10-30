@@ -7,7 +7,7 @@ def foreing_exchange_calculator(ammount):
 def run():
     print('C A L C U L A D O R A  D E  D I V I S A S')
     print('Convierte pesos mexicanosa pesos colombianos')
-    print('')
+    print('--------------------------------------------')
     ammount = float(input('Ingresa la cantidad de pesos mexicanos que quieres convertir '))
     result = foreing_exchange_calculator(ammount)
     print('${} pesos mexicanos son ${} pesos colombianos'.format(ammount, result))
