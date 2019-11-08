@@ -77,6 +77,6 @@ def fractal(n):
         turtle.left(90)
         turtle.left(z)
 
-
+ 
 fractal(8)
 turtle.exitonclick()
