@@ -1,11 +1,22 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
+from google.cloud import ndb
+from contact_model import Contact
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    return render_template('index.html')
+@app.route(r'/', methods=['GET'])
+def contac_book():
+    return render_template('contact_book.html')
+
+
+@app.route(r'/add', methods=['GET', 'POST'])
+def add_comtact():
+    if request.form:
+        contact = Contact(name=request.form.get('name'),
+                          phone=request.form.get('phone'),
+                          email=request.form.get('email'))
+        contact.put()
+    return render_template('add_contact.html')
 
 
 if __name__ == '__main__':
